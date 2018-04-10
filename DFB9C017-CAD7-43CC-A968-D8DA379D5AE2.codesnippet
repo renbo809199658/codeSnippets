@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MJ_</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    __weak typeof(self)weakSelf = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        if (weakSelf.tableView.mj_footer.isRefreshing) {
+            [weakSelf.tableView.mj_header endRefreshing];
+            return;
+        }
+        [weakSelf.dataSource removeAllObjects];
+        weakSelf.pageIndex = 1;
+        [weakSelf getDataFromNet];
+    }];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        if (weakSelf.tableView.mj_header.isRefreshing) {
+            [weakSelf.tableView.mj_footer endRefreshing];
+            return;
+        }
+        weakSelf.pageIndex += 1;
+        [weakSelf getDataFromNet];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    NSInteger count = self.dataSource.count;
+    if (!count) {
+        [self.tableView.mj_footer setHidden:YES];
+    }
+    else if(count%10)
+    {
+        [self.tableView.mj_footer setHidden:NO];
+        [self.tableView.mj_footer endRefreshingWithNoMoreData];
+    }
+    else{
+        [self.tableView.mj_footer setHidden:NO];
+    }
+    return count;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DFB9C017-CAD7-43CC-A968-D8DA379D5AE2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MJ刷新</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

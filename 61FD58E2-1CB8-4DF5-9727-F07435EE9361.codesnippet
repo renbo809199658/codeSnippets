@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>encode</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.&lt;#name#&gt; forKey:@"&lt;#name#&gt;"];
+    
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    if (self=[super init]) {
+        self.&lt;#name#&gt; = [coder decodeObjectForKey:@"&lt;#name#&gt;"];
+    }
+    return self;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>61FD58E2-1CB8-4DF5-9727-F07435EE9361</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>encode方法</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

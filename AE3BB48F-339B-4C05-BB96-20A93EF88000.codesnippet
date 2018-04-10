@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>viewDidLoad</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - view did load
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    [self creatUI];
+}
+
+#pragma mark - get date from network
+-(void)getDataFromNet{
+
+}
+
+-(void)refreshViewControllerAfterNetWork{
+
+}
+#pragma mark - click action
+
+-(IBAction)&lt;#selector#&gt;:(id)sender{
+
+}
+
+#pragma mark - creat UI
+-(void)creatUI{
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AE3BB48F-339B-4C05-BB96-20A93EF88000</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>视图控制器快捷创建</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
